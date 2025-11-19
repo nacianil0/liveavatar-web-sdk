@@ -41,8 +41,10 @@ export const LiveAvatarDemo = () => {
   };
 
   const onSessionStopped = () => {
-    // Reset the FE state
-    setSessionToken("");
+    // Reset the FE state after a small delay to allow history modal to show
+    setTimeout(() => {
+      setSessionToken("");
+    }, 500);
   };
 
   return (
